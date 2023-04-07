@@ -146,11 +146,11 @@
             <!--TYPE OF WORK-->
             <div class="col-12 col-md-6">
               <label for="WorkType" class="form-label mb-1">Type of Work</label>
-              <select class="form-select form-select-md mb-3" aria-label=".form-select-md example">
-                <option selected>Select type of work</option>
-                <option value="backend">Backend Development</option>
-                <option value="frontend">Frontend Development</option>
-                <option value="analysis">Project Analysis</option>
+              <select class="form-select form-select-md mb-3" aria-label=".form-select-md example" id="work-type">
+                <option selected value ="default">Select type of work</option>
+                <option value="backend">Backend Development   <span id="backendPrice">20.50</span>€/h</option>
+                <option value="frontend">Frontend Development  <span id="frontendPrice">15.30</span>€/h</option>
+                <option value="analysis">Project Analysis  <span id="analysisPrice">33.60</span>€/h</option>
               </select>
             </div>
   
