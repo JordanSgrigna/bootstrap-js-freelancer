@@ -115,8 +115,8 @@
           <h2 class="text-center text-uppercase">Want an offer?</h2>
           
           <!-- FORM -->
-          <div class="row bg-info">
-        
+          <form class="row" onsubmit="calculateWorkPrice(event)">
+            
             <!--NAME FORM-->
             <div class="col-12 col-md-6">
               <label for="FirstNameForm" class="form-label mb-1 fs-6">First name</label>
@@ -148,9 +148,9 @@
               <label for="WorkType" class="form-label mb-1">Type of Work</label>
               <select class="form-select form-select-md mb-3" aria-label=".form-select-md example">
                 <option selected>Select type of work</option>
-                <option value="1">Backend Development</option>
-                <option value="2">Frontend Development</option>
-                <option value="3">Project Analysis</option>
+                <option value="backend">Backend Development</option>
+                <option value="frontend">Frontend Development</option>
+                <option value="analysis">Project Analysis</option>
               </select>
             </div>
   
@@ -169,10 +169,10 @@
             
   
             <div class="col text-center py-4">
-              <button type="button" class="btn btn-warning">Send</button>
+              <button type="submit" class="btn btn-warning">Send</button>
             </div>
   
-          </div>
+          </form>
         </div>   
       </section>
       <!-- fine section offer-->
