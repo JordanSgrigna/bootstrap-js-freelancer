@@ -70,6 +70,7 @@ function calculateWorkPrice(event){
 
         document.getElementById("applied-discount-result").innerHTML = "Il codice sconto del 25% è stato applicato!";
     } else if (discountCodeUser != "") {
+        document.getElementById("DiscountCodeForm").classList.add("text-danger");
         document.getElementById("applied-discount-result").innerHTML = "Il codice sconto non è valido!";
     } else {
         document.getElementById("applied-discount-result").innerHTML = "";
