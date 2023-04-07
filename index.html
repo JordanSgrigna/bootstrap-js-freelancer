@@ -10,6 +10,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link 
+      rel="stylesheet" 
+      href="./css/style.css"
+    />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <link rel="icon" href="favicon.ico" />
     <title>Portfolio</title>
@@ -148,9 +152,9 @@
               <label for="WorkType" class="form-label mb-1">Type of Work</label>
               <select class="form-select form-select-md mb-3" aria-label=".form-select-md example" id="work-type">
                 <option selected value ="default">Select type of work</option>
-                <option value="backend">Backend Development   <span id="backendPrice">20.50</span>€/h</option>
-                <option value="frontend">Frontend Development  <span id="frontendPrice">15.30</span>€/h</option>
-                <option value="analysis">Project Analysis  <span id="analysisPrice">33.60</span>€/h</option>
+                <option value="backend">Backend Development</option>
+                <option value="frontend">Frontend Development</option>
+                <option value="analysis">Project Analysis</option>
               </select>
             </div>
   
@@ -158,7 +162,17 @@
             <!--DISCOUNT FORM-->
             <div class="col-12 col-md-6">
               <label for="DiscountCodeForm" class="form-label mb-1">Discount Code</label>
-              <input type="text" class="form-control" id="DiscountCodeForm">
+              <input type="text" class="form-control" id="DiscountCodeForm" placeholder="1234ABCD">
+              <p id="applied-discount-result" class="fw-bold mt-2"></p>
+            </div>
+            
+
+            <div class="col-12">
+              <ul>
+                <li>Backend work: <span id="backendPrice">20.50</span>€/h </li>
+                <li>Frontend work: <span id="frontendPrice">15.30</span>€/h</li>
+                <li>Project analysis work: <span id="analysisPrice">33.60</span>€/h</li>
+              </ul>
             </div>
   
             <!--MESSAGE AREA-->
@@ -166,6 +180,8 @@
               <label for="exampleFormControlTextarea1" class="form-label mb-1">Message</label>
               <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="5" placeholder="Specify your work commission..."></textarea>
             </div>
+
+          
             
   
             <div class="col text-center py-4">
@@ -173,6 +189,12 @@
             </div>
   
           </form>
+
+          <div class="text-center">
+            <h2>Your Price</h2>
+            <p class="mb-0"><span id="price">--.--</span> €</p>
+          </div>
+
         </div>   
       </section>
       <!-- fine section offer-->

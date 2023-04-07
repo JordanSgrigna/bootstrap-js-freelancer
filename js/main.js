@@ -57,5 +57,36 @@ function calculateWorkPrice(event){
             alert("Choose type of work");
     }   
 
-    console.log(price);
+    // Inserire calcolo codice sconto
+    let discountCodeUser = document.getElementById("DiscountCodeForm").value;
+
+    let isDiscountCodeAvailable = discountCodes.includes(discountCodeUser);
+
+    if(isDiscountCodeAvailable){
+        price = price * 0.75;
+        discountCodes = removeElementFromArray(discountCodes, discountCodeUser);
+
+        console.log(discountCodes);
+
+        document.getElementById("applied-discount-result").innerHTML = "Il codice sconto del 25% è stato applicato!";
+    } else if (discountCodeUser != "") {
+        document.getElementById("applied-discount-result").innerHTML = "Il codice sconto non è valido!";
+    } else {
+        document.getElementById("applied-discount-result").innerHTML = "";
+    }
+
+    //Mostrare il prezzo all'utente
+    document.getElementById("price").innerHTML = price.toFixed(2);
+}
+
+
+// --------------------- FUNZIONI GENERICHE -------------
+function removeElementFromArray(array, elementToRemove){
+
+    const index = array.indexOf(elementToRemove);
+
+    array.splice(index, 1);
+
+    return array;
+
 }
